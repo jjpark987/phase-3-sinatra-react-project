@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_05_03_233312) do
+ActiveRecord::Schema.define(version: 2023_05_06_000707) do
 
   create_table "cities", force: :cascade do |t|
     t.integer "country_id"
@@ -28,8 +28,8 @@ ActiveRecord::Schema.define(version: 2023_05_03_233312) do
   create_table "posts", force: :cascade do |t|
     t.integer "user_id"
     t.integer "city_id"
-    t.string "title"
     t.string "category"
+    t.string "title"
     t.string "description"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
