@@ -2,7 +2,7 @@ class ApplicationController < Sinatra::Base
 
   set :default_content_type, 'application/json'
 
-  # start of search lists all countries for all users
+  # render all countries for all users
   get "/countries" do
     Country.all.to_json
   end
