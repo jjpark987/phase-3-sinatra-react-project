@@ -24,7 +24,6 @@ ActiveRecord::Schema.define(version: 2023_05_08_172614) do
     t.string "category"
     t.string "title"
     t.string "body"
-    t.string "user"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

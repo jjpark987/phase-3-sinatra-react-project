@@ -28,7 +28,6 @@ end
         category: ["general", "activity"].sample,
         title: Faker::Lorem.sentence(word_count: 5),
         body: Faker::Lorem.paragraphs(number: rand(1..5)).join("\n\n"),
-        user: Faker::Internet.username,
         created_at: Faker::Time.between(from: DateTime.now - 365, to: DateTime.now)
     )
 end

@@ -18,8 +18,7 @@ class ApplicationController < Sinatra::Base
       city_id: params[:city_id],
       category: params[:category],
       title: params[:title],
-      body: params[:body],
-      user: params[:user]
+      body: params[:body]
     )
     post.to_json
   end
