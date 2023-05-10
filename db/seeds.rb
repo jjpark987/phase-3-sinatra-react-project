@@ -17,7 +17,7 @@ end
     City.create(
       name: Faker::Address.unique.city,
       population: Random.new.rand(10_000...1_000_000),
-      image: Faker::LoremFlickr.image(size: "160x120", search_terms: ["city"]),
+      image: Faker::LoremFlickr.image(size: "160x120", search_terms: ["building"]),
       country: countries.sample
     )
   end
