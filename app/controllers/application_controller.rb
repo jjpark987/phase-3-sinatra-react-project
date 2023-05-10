@@ -23,11 +23,6 @@ class ApplicationController < Sinatra::Base
     post.to_json
   end
 
-  # get post details
-  get "/posts/:post_id" do
-    Post.find(params[:post_id]).to_json
-  end
-
   # delete post
   delete "/posts/:post_id" do
     post = Post.find(params[:post_id])
@@ -36,7 +31,7 @@ class ApplicationController < Sinatra::Base
   end
 
   # patch post
-  patch "/posts/:post_id/edit" do
+  patch "/posts/:post_id" do
     post = Post.find(params[:post_id])
     post.update(
       category: params[:category],

@@ -15,12 +15,13 @@ end
 
 50.times do
     City.create(
-        name: Faker::Address.unique.city,
-        population: Random.new.rand(10_000...1_000_000),
-        image: Faker::LoremFlickr.image(search_terms: ["city"], size: "640x480"),
-        country: countries.sample
+      name: Faker::Address.unique.city,
+      population: Random.new.rand(10_000...1_000_000),
+      image: Faker::LoremFlickr.image(size: "160x120", search_terms: ["city"]),
+      country: countries.sample
     )
-end
+  end
+  
 
 200.times do
     Post.create(
