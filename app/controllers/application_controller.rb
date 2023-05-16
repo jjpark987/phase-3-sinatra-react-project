@@ -24,6 +24,11 @@ class ApplicationController < Sinatra::Base
     city.to_json
   end
 
+  # get all posts
+  get "/posts" do
+    Post.all.to_json(include: :city)
+  end
+
   # get all posts for a city
   get "/cities/:city_id/posts" do
     Post.where(city_id: params[:city_id]).to_json(include: :city)
@@ -42,7 +47,7 @@ class ApplicationController < Sinatra::Base
       title: params[:title],
       body: params[:body]
     )
-    post.to_json
+    post.to_json(include: :city)
   end
 
   # patch post
