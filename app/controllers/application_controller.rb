@@ -62,11 +62,6 @@ class ApplicationController < Sinatra::Base
     post.destroy
     post.to_json
   end
-  
-  # get all posts
-  # get "/posts" do
-  #   Post.all.to_json(include: :city)
-  # end
 
 end
 
