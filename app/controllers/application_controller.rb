@@ -4,7 +4,7 @@ class ApplicationController < Sinatra::Base
 
   # get all cities
   get "/cities" do
-    City.all.to_json
+    City.all.to_json(include: :posts)
   end
 
   # post new city
@@ -14,7 +14,7 @@ class ApplicationController < Sinatra::Base
       population: params[:population],
       image: params[:image],
       country: params[:country]
-    ).to_json
+    ).to_json(include: :posts)
   end
 
   # delete city
@@ -24,12 +24,7 @@ class ApplicationController < Sinatra::Base
     city.to_json
   end
 
-  # get all posts for a city
-  get "/cities/:city_id/posts" do
-    Post.where(city_id: params[:city_id]).to_json(include: :city)
-  end
-
-  # get one post
+  # get post
   get "/posts/:post_id" do
     Post.find(params[:post_id]).to_json(include: :city)
   end
@@ -42,7 +37,7 @@ class ApplicationController < Sinatra::Base
       title: params[:title],
       body: params[:body]
     )
-    post.to_json(include: :city)
+    post.to_json
   end
 
   # patch post
