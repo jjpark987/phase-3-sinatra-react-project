@@ -14,7 +14,7 @@ During development, the databases for both models are seeded with generated entr
 
 ### City Model
 
-The City model represents a city entity with attributes such as name, country, population, and image. The City Model offers methods for creating a new city, retrieving city information, and deleting a city, along with all its posts, from the database.
+The City model represents a city entity with attributes such as name, country, population, and image. The City Model offers methods for creating a new city, retrieving city information, and deleting a city from the database.
 
 ### Post Model
 
