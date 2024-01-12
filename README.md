@@ -20,6 +20,10 @@ The City model represents a city entity with attributes such as name, country, p
 
 The Post Model represents an individual post. It stores details about the post's title, category, body, and auto-generated timestamps to track when the post was created and last updated. This model contains full CRUD capablities, providing users with comprehensive control over the posts.
 
+## Demo
+
+[Video Walkthrough](https://youtu.be/YYjzs0jWxEg)
+
 ## Support
 
 Please contact me at jjpark987@gmail.com for any questions.
